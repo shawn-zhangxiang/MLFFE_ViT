@@ -53,8 +53,8 @@ class MLDWT_ViT(nn.Module):
         self.xf2 = DWTForward(J=2, mode='zero', wave='haar')
         self.xf3 = DWTForward(J=3, mode='zero', wave='haar')
     
-        weights = models.ViT_B_16_Weights.DEFAULT
-        self.vit_model = models.vit_b_16(weights=weights)
+        weights = models.ViT_B_32_Weights.DEFAULT
+        self.vit_model = models.vit_b_32(weights=weights)
 
         for param in self.vit_model.parameters():
             param.requires_grad = False
