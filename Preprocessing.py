@@ -5,7 +5,6 @@ from PIL import Image
 from tqdm.notebook import tqdm
 from pathlib import Path
 
-
 data_path = Path("Path")
 
 image_path_list = list(data_path.glob("*.mp4"))
