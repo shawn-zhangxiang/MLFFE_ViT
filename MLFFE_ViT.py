@@ -43,7 +43,6 @@ class DWTForward(nn.Module):
 
         return ll, yh
 
-
 class MLDWT_ViT(nn.Module): 
     def __init__(self, image_size=224, num_classes=2):
                         
