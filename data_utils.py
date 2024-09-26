@@ -19,7 +19,6 @@ test_data = datasets.ImageFolder(test_dir, transform=data_transforms)
 val_data = datasets.ImageFolder(val_dir, transform=data_transforms)
 
 NUM_WORKERS = os.cpu_count()
-
 BATCH_SIZE = 32
   
 train_dataloader = DataLoader(
