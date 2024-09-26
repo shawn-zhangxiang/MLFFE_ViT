@@ -6,6 +6,7 @@ We propose a deep fake face detection network based on discrete wavelet transfor
 ## 2. Files
 MLFFEViT.py
 <br> Preprocessing.py
+<br> data_utils.py
 
 ## 3. Dataset
 - FaceForensics++
