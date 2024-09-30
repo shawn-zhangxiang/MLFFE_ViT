@@ -7,16 +7,18 @@ We propose a deep fake face detection network based on discrete wavelet transfor
 
 To run this project, you'll need to have the following libraries installed:
 
-- Python 3.7+
+- Python 3.9+
 - PyTorch
 - torchvision
-- scikit-learn
 - matplotlib
+- pytorch_wavelets
+- facenet_pytorch
+- sklearn.metrics
 
 You can install the required libraries using pip:
 
 ```bash
-pip install torch torchvision scikit-learn matplotlib
+pip install torch torchvision pytorch_wavelets, matplotlib,facenet_pytorch,sklearn.metrics
 ```
 The dataset can be downloaded from the links provided below.
 1. FaceForensics++: https://github.com/ondyari/FaceForensics
