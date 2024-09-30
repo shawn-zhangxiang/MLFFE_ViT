@@ -1,7 +1,7 @@
 # MLFFEViT
-Code for Face Tampering Detection Network Based on Discrete Wavelet Transform and Vision Transformer.
+Code for Deepfake Face Detection via Discrete Wavelet Transform and Vision Transformer.
 ## Project Name and Introduction
-We propose a deep fake face detection network based on discrete wavelet transform and the vision transformer for enhancing the face tampering detection performance.
+We propose a Deepfake Face Detection via Discrete Wavelet Transform and Vision Transformer for enhancing the face tampering detection performance.
 
 ## Requirements
 
