@@ -65,9 +65,8 @@ def val_step(model: torch.nn.Module,
             val_acc += ((test_pred_labels == labels).sum().item()/len(test_pred_labels))
  
     val_loss = val_loss / len(dataloader)
-    val_acc = val_acc / len(dataloader)
-    
-    
+    val_acc = val_acc / len(dataloader)  
+                
     if(val_loss < min_loss):
         min_loss = val_loss
         torch.save({
@@ -107,17 +106,14 @@ def train(model: torch.nn.Module,
                                                 dataloader=val_dataloader,
                                                 loss_fn=loss_fn,
                                                 min_val_loss=min_val_loss,
-                                                device=device)
-
-        
+                                                device=device)     
         print(
           f"Epoch: {epoch+1} | "
           f"train_loss: {train_loss:.4f} | "
           f"train_acc: {train_acc:.4f} | "
           f"val_loss: {val_loss:.4f} | "
           f"val_acc: {val_acc:.4f}"
-        )
-            
+        )    
         min_val_loss=min_loss
         
         results["train_loss"].append(train_loss)
@@ -126,8 +122,6 @@ def train(model: torch.nn.Module,
         results["val_acc"].append(val_acc)
 
     return results
-
-
 
 from timeit import default_timer as timer 
 start_time = timer()
@@ -139,16 +133,15 @@ results = train(model=model,
                        loss_fn=loss_fn,
                        epochs=50,
                        device=device)
-
 end_time = timer()
 print(f"[INFO] Total training time: {end_time-start_time:.3f} seconds")
 
+
 def plot_loss(results):
-    
     loss = results["train_loss"]
     val_loss = results["val_loss"]
+  
     epochs = range(len(results["train_loss"]))
-    
     plt.plot(epochs, loss, label="train_loss")
     plt.plot(epochs, val_loss, label="val_loss")
     plt.xlabel("Epochs")
@@ -158,7 +151,6 @@ def plot_loss(results):
 plot_loss(results)
 
 def plot_accuracy(results):   
-
     accuracy = results["train_acc"]
     val_accuracy = results["val_acc"]
 
