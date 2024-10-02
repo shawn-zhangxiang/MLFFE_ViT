@@ -5,9 +5,7 @@ checkpoint = torch.load('save_best_model.pth')
 model.load_state_dict(checkpoint['model_state_dict'])
 model.eval()
 
-
 nb_classes = 2
-
 confusion_matrix = torch.zeros(nb_classes, nb_classes)
 with torch.no_grad():
     
@@ -28,8 +26,7 @@ with torch.no_grad():
             confusion_matrix[t.long(), p.long()] += 1
         
     print(f'Testing Accuracy: {(100 * test_running_corrects / test_total)}%')
-    print(f'Confusion Matrix:\n {confusion_matrix}')
-    
+    print(f'Confusion Matrix:\n {confusion_matrix}')    
 
 precision = confusion_matrix[1][1] / (confusion_matrix[1][1] + confusion_matrix[0][1])
 recall = confusion_matrix[1][1] / (confusion_matrix[1][1] + confusion_matrix[1][0])
@@ -97,4 +94,3 @@ plt.xticks(range(len(label_names)), label_names)
 plt.yticks(range(len(label_names)), label_names)
 plt.show()
  
-
