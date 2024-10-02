@@ -30,7 +30,7 @@ The dataset can be downloaded from the links provided below.
 ## Dataset Preparation
 
 ### Step 1: Convert Videos into Frames
-You need to extract frames from videos using Preprocessing script and remove frames that contained incomplete or partial faces, hands, actors' clothing, and other items in the frames background.  
+You need to extract frames from videos using the Preprocessing script and remove frames that contained incomplete or partial faces, hands, actors' clothing, and other items in the frame's background.  
 
 ### Step 2: Dataset Structure
 
@@ -57,22 +57,21 @@ video_dataset/
 
 Create your dataset according to the above structure.
 
-## Training and testing the Model
+## Training and Testing the Model
 
-Ensure that the paths to your dataset are correctly set.
+Make sure you've set the paths to your dataset correctly.
 
 ### Train and Evaluation
 
-Train your model and save the best model with minmum validation loss. You can load this model for further evaluation or inference.
+Train your model and save the best model with minimum validation loss. You can load this model for further evaluation or inference.
 
 ## Results Visualization
 
-The script includes plotting of training and validation accuracy, loss, and the confusion matrix.
+The script includes a plot of training and validation accuracy, loss, and confusion matrix.
 
 ### Loss and Accuracy Plots
 
-After training, the script generates plots for training and validation loss and accuracy.
+After training, the script generates plots for training, validation loss, and accuracy.
 
 ## Conclusion
-
-This project demonstrates a complete workflow for training and evaluating a deepfake face detection model via discrete wavelet transform and the vision transformer.The provided details includes data loading, model training, evaluation, and visualization of results.
+This project showcases a comprehensive workflow for training and assessing a deepfake face detection model using the discrete wavelet transform and the vision transformer. The provided details include data loading, model training, evaluation, and visualization of results.
